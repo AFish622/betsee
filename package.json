@@ -4,7 +4,7 @@
   "description": "Full stack application where users can keep track of their bets",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node server.js"
   },
   "keywords": [
@@ -15,6 +15,11 @@
   "author": "Austin Fisher",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "expect": "^26.0.1",
+    "express": "^4.17.1",
+    "mocha": "^7.1.2",
+    "should": "^13.2.3"
   }
 }
