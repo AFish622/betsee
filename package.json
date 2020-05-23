@@ -15,11 +15,15 @@
   "author": "Austin Fisher",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "expect": "^26.0.1",
     "express": "^4.17.1",
+    "json-parser": "^3.1.2",
     "mocha": "^7.1.2",
+    "mongoose": "^5.9.15",
+    "morgan": "^1.10.0",
     "should": "^13.2.3"
   }
 }
