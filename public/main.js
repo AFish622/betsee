@@ -19,6 +19,9 @@ function sendNewUserRequest(username, password, firstName, lastName) {
         lastName: lastName
     }
     console.log(newUser)
+    $.getJSON('/betsee', function(data) {
+        console.log(data)
+    })
 }
 
 clickOnSignUpSubmit();
