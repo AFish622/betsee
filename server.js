@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
+const { PORT, DATABASE_URL} = require('./config');
+
 const app = express();
 
 const { router: usersRouter } = require('./users/router')
@@ -33,7 +35,7 @@ app.get('/betsee/users/', usersRouter, (req, res) => {
 let server;
 function runServer() {
     return new Promise((resolve, reject) => {
-        mongoose.connect(DATABASE_URL, { useMongoClient: true }, err => {
+        mongoose.connect(DATABASE_URL, err => {
             if (err) {
                 return reject(err);
             }
@@ -47,7 +49,28 @@ function runServer() {
             });
         });
     });
+};
+
+function closeServer() {
+    return mongoose.disconnect().then(() => {
+        return new Promise((resolve, reject) => {
+            console.log('Closing server');
+            server.close(err => {
+                if (err) {
+                    return reject(err);
+                }
+                resolve();
+            });
+        });
+    });
 }
 
+if (require.main === module) {
+    runServer().catch(err => console.error(err));
+}
 
-app.listen(process.env.PORT || 8080);
+module.exports = { app, runServer, closeServer };
+
+
+
+// app.listen(process.env.PORT || 8080);

@@ -27,6 +27,7 @@ const UserSchema = mongoose.Schema({
 
 UserSchema.methods.serialize = function() {
     return {
+        // check the expression, may only need to return username
         username: this.username || '',
         firstName: this.firstName || '',
         lastName: this.lastName || ''
@@ -43,4 +44,4 @@ UserSchema.statics.hashPassword = function(password) {
 
 const User = mongoose.model('User', UserSchema);
 
-module.exports = { User }
+module.exports = { User };
