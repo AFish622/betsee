@@ -4,7 +4,7 @@ deploy:
   provider: heroku
   api_key:
     secure: l/m50diJEK7vKRqnx2I0Q1w7L4eNBzRYlm28aQS2CLEWunX4kopZOIGXARKNQUlWZx4yTMjSG174330H9lbDuGsyxQsq8bpkH5RDkr4l+QOhP4xl7TOMlymM2VYDDGwPDARDrmWkjf1HAbG2g94F5pTh44UXr/yzEvS74EJu83z1bgwQgNggzvhlC0+UFG6namb/K+qXtwsegUvWWhCiU+nNyKcJOIe3M72xffZbWTD42Ne9ntq3WiKB8ZP0HyJ1kYM71UDmwin9lbwru3fP6YFfF9R0sVXh59JFGlL0m3b0LEEg7QSmhkcmkd9bVQqEJ3ys9PmB5WnjkKH05gFPyPK59tCQsnzPeg3WA7wOCcRmITtbtCCENsi27WeccQBeSMtp/suC9iqqg83+VZDxzJXYtu37iWJKEmncTrBJ62BbMbHEaC0qk32Ladfp65O6YfT0dr6tceY1rA2jQClf60nplrAjQHwGDlO5NrTubLITE1Pm1IEdYZnFEJR3OdKTjJS6vS89snLJsOKMhgpfMVj4RgNtTyid3mf7mp1O0MX+jNsnec0qInjYyfCUCUQF1i9+HwSqWQgiFyd+VEQl9xeLk1Vb3Kh4WxCK4Fvv9aD78U/GTNr/WH9LrZLKcgisR4grOYP8CAcmv0t1p9y32jXiPDORIKIrg3LRRL2s630=
-  app: https://git.heroku.com/mysterious-journey-51805.git
+  app: mysterious-journey-51805
   on:
     repo: AFish622/betsee
     branch: client-build
