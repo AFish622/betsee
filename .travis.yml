@@ -7,5 +7,5 @@ deploy:
   app: mysterious-journey-51805
   on:
     repo: AFish622/betsee
-    branch: client-build
+    branch: master
   skip_cleanup: 'true'
