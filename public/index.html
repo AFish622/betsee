@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,10 +12,11 @@
 <body>
     <div class="nav-bar">
         <h2 class="nav-bar-logo">Betsee</h2>
-        <h2 class="nav-bar-burger">H</h2>
+        <h2><img  class="nav-bar-burger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="drop-down-burger-option"></h2>
     </div>
 
-    <div class="sign-up-form-container">
+
+    <!-- <div class="sign-up-form-container">
         <form class="sign-up-form" action="#">
             <p class="sign-up-string">Sign up for Betsee</p>
 
@@ -30,6 +33,200 @@
             <input class="last-name-input" type="text" name="last-name" value="Fisher">
             <input class="sign-up-submit" type="submit" value="Submit">
         </form>
+    </div> -->
+
+
+
+
+
+<!-- TABLE -->
+
+
+    <!-- <div class="home-bets-container">
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="1">Date</td>
+                    <td>League</td>
+                    <td>Made with</td>
+                    <td colspan="1">Amount</td>
+                </tr>
+            </thead>
+`
+            <tr>
+                <td colspan="1">6/22/19</td>
+                <td>NBA</td>
+                <td>npatel</td>
+                <td colspan="1">$100</td>
+
+                <tr>
+                    <td colspan="100%">
+                        <textarea class="bet-details">Lakers don't win championship more text more asdnasjndakjs.d asdsandsan d.asndabsdk basjkdbaskdasdas</textarea>
+                    </td> 
+                </tr>
+
+                <tr>
+                    <td colspan="100%">
+                        <label>Complete: </label>
+                        <input class="paid-radio" type="radio">
+                        <input class="paid-confirm hidden" type="submit" value="Confirm">
+                    </td>
+                </tr>
+               
+            </tr>
+        </table>
+    </div> -->
+
+
+
+
+<!-- GRID -->
+    <h2 class="open-bets-header">Open Bets</h2>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="date-box box">Date</div>
+        </div>
+        <div class="col-3">
+            <div class="league-box box">League</div>
+        </div>
+        <div class="col-3">
+            <div class="made-with-box box">Made With</div>
+        </div>
+        <div class="col-3">
+            <div class="amount-box box">Amount</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="date-data-box box">6/22/88</div>
+        </div>
+        <div class="col-3">
+            <div class="league-data-box box">NBA</div>
+        </div>
+        <div class="col-3">
+            <div class="made-data-box box">NPatel</div>
+        </div>
+        <div class="col-3">
+            <div class="amount-data-box box">$100</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="text-area">
+                <label for="text-area"></label>
+                <textarea name="text-area" id="" cols="30" rows="6" maxlength="180">Lakers don't win championship</textarea>
+
+                <label for="complete"></label>
+                <select name="complete" class="complete-select">
+                    <option value="complete-bet">Edit/View Bet</option>
+                    <option value="delete-bet">Delete Bet</option>
+                    <option value="edit-bet">Complete Bet</option>
+                </select>
+
+                <input  class="edit-bet-submit" type="button" value="Submit">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-3">
+            <div class="date-box box">Date</div>
+        </div>
+        <div class="col-3">
+            <div class="league-box box">League</div>
+        </div>
+        <div class="col-3">
+            <div class="made-with-box box">Made With</div>
+        </div>
+        <div class="col-3">
+            <div class="amount-box box">Amount</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="date-data-box box">3/12/20</div>
+        </div>
+        <div class="col-3">
+            <div class="league-data-box box">NFL</div>
+        </div>
+        <div class="col-3">
+            <div class="made-data-box box">QBroadwell</div>
+        </div>
+        <div class="col-3">
+            <div class="amount-data-box box">$50</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="text-area">
+                <label for="text-area"></label>
+                <textarea name="text-area" id="" cols="30" rows="6" maxlength="180">Dolphins never make the super bowl</textarea>
+
+                <label for="complete"></label>
+                <select name="complete" class="complete-select">
+                    <option value="complete-bet">Edit/View Bet</option>
+                    <option value="delete-bet">Delete Bet</option>
+                    <option value="edit-bet">Complete Bet</option>
+                </select>
+
+                <input  class="edit-bet-submit" type="button" value="Submit">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-3">
+            <div class="date-box box">Date</div>
+        </div>
+        <div class="col-3">
+            <div class="league-box box">League</div>
+        </div>
+        <div class="col-3">
+            <div class="made-with-box box">Made With</div>
+        </div>
+        <div class="col-3">
+            <div class="amount-box box">Amount</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="date-data-box box">1/2/20</div>
+        </div>
+        <div class="col-3">
+            <div class="league-data-box box">NBA</div>
+        </div>
+        <div class="col-3">
+            <div class="made-data-box box">ABiel</div>
+        </div>
+        <div class="col-3">
+            <div class="amount-data-box box">$1000</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="text-area">
+                <label for="text-area"></label>
+                <textarea name="text-area" id="" cols="30" rows="6" maxlength="180">Warriors win championship next year</textarea>
+
+                <label for="complete"></label>
+                <select name="complete" class="complete-select">
+                    <option value="complete-bet">Edit/View Bet</option>
+                    <option value="delete-bet">Delete Bet</option>
+                    <option value="edit-bet">Complete Bet</option>
+                </select>
+
+                <input  class="edit-bet-submit" type="button" value="Submit">
+            </div>
+        </div>
     </div>
 
     <script

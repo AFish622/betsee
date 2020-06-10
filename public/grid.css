@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    max-width: 1000px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    width: 97%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box {
+    height: 55px;
+    padding-top: 17%;
+    border: 1px solid black;
+}
+
+.row::before, .row::after {
+    display: table;
+    content: '';
+}
+
+.row::after {
+    clear:both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+    float: left;
+    /* padding-left: 1.04166666%; */
+    /* padding-right: 1.04166666%; */
+    font-size: 19px;
+}
+
+.col-12 {
+    width: 100%;
+    }
+
+.col-6 {
+      width: 50%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.text-area {
+    margin-bottom: 5%;
+    border: 2px solid black;
+}
+
+textarea, input, select {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 95%;
+    font-size: 18px;
+}
+
+.edit-bet-submit {
+        margin-bottom: 5%;
+        height: 30px;
+        background-color: violet;
+}
+
+.complete-select {
+    height: 30px;
+}
+
+
+  @media only screen and (min-width: 640px) {
+        .box {
+            padding-top: 7%;
+        }
+  }

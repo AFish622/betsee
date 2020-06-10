@@ -24,4 +24,20 @@ function sendNewUserRequest(username, password, firstName, lastName) {
     })
 }
 
+function clickOnConfirmBet() {
+    $('.paid-radio').on('click', function(event) {
+        event.preventDefault();
+        $('.paid-confirm').removeClass('hidden');
+        console.log('worked')
+    })
+}
+
+function clickOnMenuBurger() {
+    $('.menu-button').click(function() {
+        $('.responsive-menu').toggleClass('expand');
+    })
+}
+
+clickOnConfirmBet();
 clickOnSignUpSubmit();
+clickOnMenuBurger();
