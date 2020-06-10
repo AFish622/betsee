@@ -1,16 +1,25 @@
-// require('dotenv').config();
+'use strict'
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const passport = require('passport');
+const bodyParser = require('body-parser');
 
 const { PORT, DATABASE_URL} = require('./config');
 
 const app = express();
 
-const { router: usersRouter } = require('./users/router')
+const { router: usersRouter } = require('./users/router');
+const { router: authRouter, localStrategy, jwtStrategy } = require('./auth')
 
 app.use(express.static('public'));
 app.use(morgan('common'));
+
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: true }));
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -21,6 +30,25 @@ app.use(function (req, res, next) {
     }
 })
 
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
+const jwtAuth = passport.authenticate('jwt', { session: false });
+
+app.get('/api/protected', jwtAuth, (req, res) => {
+    return res.json({
+        data: 'this works'
+    });
+});
+
+app.use('*', (req, res) => {
+    return res.status(404).json({ message: 'Not Found' });
+});
+
+app.use('/api/users/', usersRouter);
+app.use('/api/auth/', authRouter);
+
+// connect auth
 // set up DB
 // set up route to user endpoint
 // add middleware to routes
